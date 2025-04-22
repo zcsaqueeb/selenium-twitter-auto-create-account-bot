@@ -34,7 +34,7 @@ This script automates the signup process until the CAPTCHA step or OTP verificat
 ## Installation  
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/selenium-twitter-test-bot.git
+   git clone https://github.com/zcsaqueeb/selenium-twitter-auto-create-account-bot.git
    cd selenium-twitter-test-bot
    ```
 2. Install dependencies:
