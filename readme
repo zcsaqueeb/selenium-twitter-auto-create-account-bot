@@ -1,0 +1,56 @@
+# Selenium Twitter Test Bot
+
+## Overview  
+**Selenium Twitter Test Bot** is a Python automation script designed for testing Twitter's (X) signup flow. This tool automates the process with human-like interactions and handles all steps except solving CAPTCHA and entering OTP, which require manual intervention.
+
+## Required Files and Configuration  
+### 1. `config.json`  
+A JSON file to store essential data like email and password. Ensure the file is placed in the specified directory (`src/json/config.json`).
+
+**Example:**
+```json
+{
+    "email": "your_email@example.com",
+    "password": "your_password"
+}
+```
+
+### 2. `chromedriver.exe`  
+Download ChromeDriver corresponding to your browser version and ensure it is added to your system's PATH. Alternatively, place it in the same directory as the script.
+
+### 3. Manual CAPTCHA and OTP Handling  
+This script automates the signup process until the CAPTCHA step or OTP verification, which must be resolved manually:
+- CAPTCHA: The automation pauses at CAPTCHA, requiring user input to solve it.
+- OTP: Once an OTP is sent to the email or phone number, it needs to be entered manually for verification.
+
+## Features  
+- **Configurable Data**: Load email and password dynamically from JSON files.
+- **Human-like Behavior**: Randomized delays and realistic typing simulation.
+- **Incognito Mode**: Uses Chrome options to prevent cache interference during testing.
+- **Anti-Detection Mechanisms**: Spoofing user-agent and disabling Selenium detection.
+- **Dynamic Form Handling**: Random name generation and adaptive date of birth selection.
+- **Manual Intervention**: Supports pauses to resolve CAPTCHA and enter OTP.
+
+## Installation  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/selenium-twitter-test-bot.git
+   cd selenium-twitter-test-bot
+   ```
+2. Install dependencies:
+   ```bash
+   pip install selenium faker
+   ```
+3. Place the required `config.json` file in the directory.
+
+## Usage  
+1. Update `config.json` with testing credentials.
+2. Run the script:
+   ```bash
+   python main.py
+   ```
+3. Manually solve the CAPTCHA when prompted.
+4. Enter the OTP sent to the email or phone number for verification.
+
+## Disclaimer  
+This project is intended for **testing purposes only**. Ensure you have the necessary permissions to use this script on Twitter (X). Misuse may violate their terms of service.
